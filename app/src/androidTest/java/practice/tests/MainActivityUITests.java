@@ -14,6 +14,7 @@ import org.junit.runner.RunWith;
  * Created by piyush on 2/10/17.
  */
 
+import static org.junit.Assert.*;
 @RunWith(AndroidJUnit4.class)
 public class MainActivityUITests {
     MainActivity mainActivity;
@@ -35,7 +36,7 @@ public class MainActivityUITests {
                 ((Button)mainActivity.findViewById(R.id.btn_calc)).performClick();
 
                 String result = ((TextView) mainActivity.findViewById(R.id.tv_fare)).getText().toString();
-
+                assertEquals(result,"50.0");
             }
         });
     }
